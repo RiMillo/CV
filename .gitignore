@@ -2,6 +2,7 @@
 CV_ENG/CV_ENG.pdf
 CV_ITA/CV_ITA.pdf
 CV_FRA/CV_FRA.pdf
+*.orig
 # Taken from https://github.com/github/gitignore
 #
 # We use: TeX.gitignore and Vim.gitignore
