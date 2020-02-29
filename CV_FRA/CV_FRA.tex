@@ -9,7 +9,7 @@
 %	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
 %	copies of the Software, and to permit persons to whom the Software is
 %	furnished to do so, subject to the following conditions:
-%	
+%
 %	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
 %	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
 %	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
@@ -17,7 +17,7 @@
 %	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
 %	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
 %	THE SOFTWARE.
-%	
+%
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
@@ -29,7 +29,7 @@
 %============================================================================%
 
 %we use article class because we want to fully customize the page and dont use a cv template
-\documentclass[10pt,a4paper]{article}	
+\documentclass[10pt,a4paper]{article}
 
 
 %----------------------------------------------------------------------------------------
@@ -37,7 +37,7 @@
 %----------------------------------------------------------------------------------------
 
 %we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}		
+\usepackage[utf8]{inputenc}
 
 %----------------------------------------------------------------------------------------
 %	LANGUAGE
@@ -65,14 +65,14 @@
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+%\usepackage[thin]{roboto}
 
 % set font default
-\renewcommand*\familydefault{\sfdefault} 	
+\renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
 % more font size definitions
-\usepackage{moresize}		
+\usepackage{moresize}
 
 
 %----------------------------------------------------------------------------------------
@@ -80,21 +80,21 @@
 %----------------------------------------------------------------------------------------
 
 %debug page outer frames
-%\usepackage{showframe}			
+%\usepackage{showframe}
 
 
 %define page styles using geometry
-\usepackage[a4paper]{geometry}		
+\usepackage[a4paper]{geometry}
 
 % for example, change the margins to 2 inches all round
-% Original \geometry{top=1.75cm, bottom=-.6cm, left=1.5cm, right=1.5cm} 	
+% Original \geometry{top=1.75cm, bottom=-.6cm, left=1.5cm, right=1.5cm}
 \geometry{top=1.25cm, bottom=-.6cm, left=1.5cm, right=1.5cm}
 %use customized header
-\usepackage{fancyhdr}				
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 
 %less space between header and content
-\setlength{\headheight}{-5pt}		
+\setlength{\headheight}{-5pt}
 
 
 %customize entries left, center and right
@@ -108,10 +108,10 @@
 
 %----------------------------------------------------------------------------------------
 %	TABLE /ARRAY DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for layouting tables
-\usepackage{multicol}			
+\usepackage{multicol}
 \usepackage{multirow}
 
 %extended aligning of tabular cells
@@ -119,11 +119,13 @@
 
 \newcolumntype{x}[1]{%
 >{\raggedleft\hspace{0pt}}p{#1}}%
+\newcolumntype{q}[1]{%
+>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}%
 
 
 %----------------------------------------------------------------------------------------
 %	GRAPHICS DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 %for header image
 \usepackage{graphicx}
@@ -131,11 +133,11 @@
 %for floating figures
 \usepackage{wrapfig}
 \usepackage{float}
-%\floatstyle{boxed} 
+%\floatstyle{boxed}
 %\restylefloat{figure}
 
-%for drawing graphics		
-\usepackage{tikz}				
+%for drawing graphics
+\usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 \usepackage{hyperref}
@@ -148,7 +150,7 @@
 
 %----------------------------------------------------------------------------------------
 %	Color DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%----------------------------------------------------------------------------------------
 
 \usepackage{color}
 
@@ -176,23 +178,23 @@
 %----------------------------------------------------------------------------------------
 
 % remove top header line
-\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\headrulewidth}{0pt}
 
 %remove botttom header line
-\renewcommand{\footrulewidth}{0pt}	  	
+\renewcommand{\footrulewidth}{0pt}
 
 %remove pagenum
-\renewcommand{\thepage}{}	
+\renewcommand{\thepage}{}
 
-%remove section num		
-\renewcommand{\thesection}{}			
+%remove section num
+\renewcommand{\thesection}{}
 
 %----------------------------------------------------------------------------------------
 % 	ARROW GRAPHICS in Tikz
 %----------------------------------------------------------------------------------------
 
 % a six pointed arrow poiting to the left
-\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
 
 % include the left arrow into a tikz picture
 % param1: fill color
@@ -258,7 +260,7 @@
 %	 CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as cv entry headline followed by two paragraphs about 
+% creates a stretched box as cv entry headline followed by two paragraphs about
 % the work you did
 % param 1:	event time i.e. 2014 or 2011-2014 etc.
 % param 2:	event name (what did you do?)
@@ -276,14 +278,14 @@
 \vspace{-12pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
-	\begin{tabular*}{1\textwidth}{p{2.3cm} p{14.4cm}}
+	\begin{tabular*}{1\textwidth}{p{2.3cm} q{15.2cm}}
 &\larrow{bgcol} {#4}\\[3pt]
 &\larrow{bgcol} {#5}\\[6pt]
 	\end{tabular*}
 
 }
 
-% creates a stretched box as 
+% creates a stretched box as
 \newcommand{\cveventmeta}[2]
 {
 	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
@@ -316,7 +318,7 @@
 
 
 %use our custom fancy header definitions
-\pagestyle{fancy}	
+\pagestyle{fancy}
 
 
 %---------------------------------------------------------------------------------------
@@ -391,7 +393,7 @@
 %\vspace{-114pt}
 
 %\metasection{Status:}{M.Sc. Digital Media, IT Consultant at We4IT Bremen}
-%\metasection{Fields:}{Project Management, Software Development, Scrum, Usability} 
+%\metasection{Fields:}{Project Management, Software Development, Scrum, Usability}
 %\metasection{Prefers:}{JS, Java, XPages, Flex / AIR, Processing, Git, Eclipse}
 %\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
 
@@ -453,7 +455,7 @@
 
 \vspace{7pt}
 \begin{minipage}{.48\linewidth}
-\begin{flushleft}                           
+\begin{flushleft}
 \cvsubsection{Compétences informatiques}
 \vspace{6pt}
 \begin{tabular*}{1\textwidth}{l l l}
@@ -462,11 +464,11 @@
 &		 \larrow{bgcol}  \textbf{Notions de base} : Python, Fortran, R, Java,\\[3pt]
 & 		 VAOne, Nastran
 	\end{tabular*}
-\end{flushleft} 
+\end{flushleft}
 \end{minipage}
 \hfill
 \begin{minipage}{.48\linewidth}
-\begin{flushright}                                      
+\begin{flushright}
 \cvsubsection{Langues}
 \vspace{6pt}
 \begin{tabular*}{1\linewidth}{l l l}
@@ -475,24 +477,24 @@
 &		 \larrow{bgcol}  \textbf{Anglais}: &Courant, certificat FCE, B2\\[3pt]
 &		 \larrow{bgcol}  \textbf{Russe}: &Notions\\[3pt]
 	\end{tabular*}
-\end{flushright} 
+\end{flushright}
 \end{minipage}
 
 \bigskip
 
 \begin{minipage}{.48\linewidth}
-\begin{flushleft}                           
+\begin{flushleft}
 \cvsubsection{Activités extra-professionnelles}
 \vspace{6pt}
 \begin{tabular*}{1\textwidth}{l l }
 &		 \larrow{bgcol}  Responsable de l'approvisionnement d'un foyer\\[3pt]& de 40 étudiants (2015)\\[3pt]
 &		 \larrow{bgcol}  Trésorier de l'AIM - Association des Ingénieurs\\[3pt]& en Mathématiques (2016)\\[3pt]
 	\end{tabular*}
-\end{flushleft} 
+\end{flushleft}
 \end{minipage}
 \hfill
 \begin{minipage}{.48\linewidth}
-\begin{flushright}                                      
+\begin{flushright}
 \cvsubsection{Centres d'intér\^ets et Bénévolat}
 \vspace{6pt}
 \begin{tabular*}{1\linewidth}{l l}
@@ -500,14 +502,14 @@
 & 		 \larrow{bgcol} Membre active de l'association Smileland, qui\\[3pt]& soutient un village au Congo\\[3pt]
 &		 \larrow{bgcol} Professeur d'italien pour les réfugiés (2015)\\[3pt]
 	\end{tabular*}
-\end{flushright} 
+\end{flushright}
 \end{minipage}
 
 
 
 
 %-------------------------------------------------------------------------------------------------
-%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
+%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
 %--------------------------------------------------------------------------------------------------
 
 \null

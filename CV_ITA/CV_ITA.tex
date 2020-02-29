@@ -1,59 +1,59 @@
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
-%	The MIT License (MIT)
+%  The MIT License (MIT)
 %
-%	Copyright (c) 2015 Jan Küster
+%  Copyright (c) 2015 Jan Küster
 %
-%	Permission is hereby granted, free of charge, to any person obtaining a copy
-%	of this software and associated documentation files (the "Software"), to deal
-%	in the Software without restriction, including without limitation the rights
-%	to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
-%	copies of the Software, and to permit persons to whom the Software is
-%	furnished to do so, subject to the following conditions:
-%	
-%	THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-%	IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-%	FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
-%	AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-%	LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
-%	OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
-%	THE SOFTWARE.
-%	
+%  Permission is hereby granted, free of charge, to any person obtaining a copy
+%  of this software and associated documentation files (the "Software"), to deal
+%  in the Software without restriction, including without limitation the rights
+%  to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+%  copies of the Software, and to permit persons to whom the Software is
+%  furnished to do so, subject to the following conditions:
+%
+%  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+%  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+%  FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+%  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+%  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+%  OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+%  THE SOFTWARE.
+%
 %
 %-----------------------------------------------------------------------------------------------------------------------------------------------%
 
 
 %============================================================================%
 %
-%	DOCUMENT DEFINITION
+%  DOCUMENT DEFINITION
 %
 %============================================================================%
 
 %we use article class because we want to fully customize the page and dont use a cv template
-\documentclass[10pt,a4paper]{article}	
+\documentclass[10pt,a4paper]{article}
 
 
 %----------------------------------------------------------------------------------------
-%	ENCODING
+%  ENCODING
 %----------------------------------------------------------------------------------------
 
 %we use utf8 since we want to build from any machine
-\usepackage[utf8]{inputenc}		
+\usepackage[utf8]{inputenc}
 
 %----------------------------------------------------------------------------------------
-%	LANGUAGE
+%  LANGUAGE
 %----------------------------------------------------------------------------------------
 
 \usepackage[italian]{babel}
 
 %----------------------------------------------------------------------------------------
-%	LOGIC
+%  LOGIC
 %----------------------------------------------------------------------------------------
 
 % provides \isempty test
 \usepackage{xifthen}
 
 %----------------------------------------------------------------------------------------
-%	FONT
+%  FONT
 %----------------------------------------------------------------------------------------
 
 % some tex-live fonts - choose your own
@@ -65,37 +65,37 @@
 %\usepackage{fetamont}
 %\usepackage[default]{gillius}
 %\usepackage[light,math]{iwona}
-%\usepackage[thin]{roboto} 
+%\usepackage[thin]{roboto}
 
 % set font default
-\renewcommand*\familydefault{\sfdefault} 	
+\renewcommand*\familydefault{\sfdefault}
 \usepackage[T1]{fontenc}
 
 % more font size definitions
-\usepackage{moresize}		
+\usepackage{moresize}
 
 
 %----------------------------------------------------------------------------------------
-%	PAGE LAYOUT  DEFINITIONS
+%  PAGE LAYOUT  DEFINITIONS
 %----------------------------------------------------------------------------------------
 
 %debug page outer frames
-%\usepackage{showframe}			
+%\usepackage{showframe}
 
 
 %define page styles using geometry
-\usepackage[a4paper]{geometry}		
+\usepackage[a4paper]{geometry}
 
 % for example, change the margins to 2 inches all round
 %Original \geometry{top=1.75cm, bottom=-.6cm, left=1.5cm, right=1.5cm}
 \geometry{top=1.3cm, bottom=-.6cm, left=1.5cm, right=1.5cm}
 
 %use customized header
-\usepackage{fancyhdr}				
+\usepackage{fancyhdr}
 \pagestyle{fancy}
 
 %less space between header and content
-\setlength{\headheight}{-5pt}		
+\setlength{\headheight}{-5pt}
 
 
 %customize entries left, center and right
@@ -108,11 +108,11 @@
 \setlength{\parindent}{0mm}
 
 %----------------------------------------------------------------------------------------
-%	TABLE /ARRAY DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%  TABLE /ARRAY DEFINITIONS
+%----------------------------------------------------------------------------------------
 
 %for layouting tables
-\usepackage{multicol}			
+\usepackage{multicol}
 \usepackage{multirow}
 
 %extended aligning of tabular cells
@@ -120,11 +120,13 @@
 
 \newcolumntype{x}[1]{%
 >{\raggedleft\hspace{0pt}}p{#1}}%
+\newcolumntype{q}[1]{%
+>{\raggedright\arraybackslash\hspace{0pt}}p{#1}}%
 
 
 %----------------------------------------------------------------------------------------
-%	GRAPHICS DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%  GRAPHICS DEFINITIONS
+%----------------------------------------------------------------------------------------
 
 %for header image
 \usepackage{graphicx}
@@ -132,11 +134,11 @@
 %for floating figures
 \usepackage{wrapfig}
 \usepackage{float}
-%\floatstyle{boxed} 
+%\floatstyle{boxed}
 %\restylefloat{figure}
 
-%for drawing graphics		
-\usepackage{tikz}				
+%for drawing graphics
+\usepackage{tikz}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
 \usepackage{hyperref}
@@ -148,8 +150,8 @@
 \usepackage{fontawesome}
 
 %----------------------------------------------------------------------------------------
-%	Color DEFINITIONS
-%---------------------------------------------------------------------------------------- 
+%  Color DEFINITIONS
+%----------------------------------------------------------------------------------------
 
 \usepackage{color}
 
@@ -167,40 +169,40 @@
 %============================================================================%
 %
 %
-%	DEFINITIONS
+%  DEFINITIONS
 %
 %
 %============================================================================%
 
 %----------------------------------------------------------------------------------------
-% 	HEADER
+%   HEADER
 %----------------------------------------------------------------------------------------
 
 % remove top header line
-\renewcommand{\headrulewidth}{0pt} 
+\renewcommand{\headrulewidth}{0pt}
 
 %remove botttom header line
-\renewcommand{\footrulewidth}{0pt}	  	
+\renewcommand{\footrulewidth}{0pt}
 
 %remove pagenum
-\renewcommand{\thepage}{}	
+\renewcommand{\thepage}{}
 
-%remove section num		
-\renewcommand{\thesection}{}			
+%remove section num
+\renewcommand{\thesection}{}
 
 %----------------------------------------------------------------------------------------
-% 	ARROW GRAPHICS in Tikz
+%   ARROW GRAPHICS in Tikz
 %----------------------------------------------------------------------------------------
 
 % a six pointed arrow poiting to the left
-\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}	
+\newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
 
 % include the left arrow into a tikz picture
 % param1: fill color
 %
 \newcommand{\larrow}[1]
 {\begin{tikzpicture}[scale=0.58]
-	 \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
+   \filldraw[fill=#1!100,draw=#1!100!black]  \tzlarrow
  \end{tikzpicture}
 }
 
@@ -212,7 +214,7 @@
 %
 \newcommand{\rarrow}
 {\begin{tikzpicture}[scale=0.7]
-	\filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
+  \filldraw[fill=sectcol!100,draw=sectcol!100!black] \tzrarrow
  \end{tikzpicture}
 }
 
@@ -223,7 +225,7 @@
 
 
 %----------------------------------------------------------------------------------------
-%	custom sections
+%  custom sections
 %----------------------------------------------------------------------------------------
 
 % create a coloured box with arrow and title as cv section headline
@@ -251,44 +253,44 @@
 \newcommand{\metasection}[2]
 {
 \begin{tabular*}{1\textwidth}{p{2.4cm} p{11cm}}
-\larrow{bgcol}	\normalsize{\textcolor{sectcol}{#1}}&#2\\[12pt]
+\larrow{bgcol}  \normalsize{\textcolor{sectcol}{#1}}&#2\\[12pt]
 \end{tabular*}
 }
 
 %----------------------------------------------------------------------------------------
-%	 CV EVENT
+%   CV EVENT
 %----------------------------------------------------------------------------------------
 
-% creates a stretched box as cv entry headline followed by two paragraphs about 
+% creates a stretched box as cv entry headline followed by two paragraphs about
 % the work you did
-% param 1:	event time i.e. 2014 or 2011-2014 etc.
-% param 2:	event name (what did you do?)
-% param 3:	institution (where did you work / study)
-% param 4:	what was your position
-% param 5:	some words about your contributions
+% param 1:  event time i.e. 2014 or 2011-2014 etc.
+% param 2:  event name (what did you do?)
+% param 3:  institution (where did you work / study)
+% param 4:  what was your position
+% param 5:  some words about your contributions
 %
 \newcommand{\cvevent}[5]
 {
 \vspace{8pt}
-	\begin{tabular*}{1\textwidth}{p{2.3cm}  p{7.8cm} x{6.9cm}} %Original 2.3 10.8 3.9
+  \begin{tabular*}{1\textwidth}{p{2.3cm} p{7.8cm} x{6.9cm}} %10.8 3.9
  \textcolor{bgcol}{#1}& \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
 
-	\end{tabular*}
+  \end{tabular*}
 \vspace{-12pt}
 \textcolor{softcol}{\hrule}
 \vspace{6pt}
-	\begin{tabular*}{1\textwidth}{p{2.3cm} p{14.4cm}}
-&		 \larrow{bgcol}  #4\\[3pt]
-&		 \larrow{bgcol}  #5\\[6pt]
-	\end{tabular*}
+  \begin{tabular*}{1\textwidth}{p{2.3cm} q{15.2cm}}
+&\larrow{bgcol} {#4}\\[3pt]
+&\larrow{bgcol} {#5}\\[6pt]
+  \end{tabular*}
 
 }
 
-% creates a stretched box as 
+% creates a stretched box as
 \newcommand{\cveventmeta}[2]
 {
-	\mbox{\mystrut \hspace{87pt}\textit{#1}}\\
-	#2
+  \mbox{\mystrut \hspace{87pt}\textit{#1}}\\
+  #2
 }
 
 %----------------------------------------------------------------------------------------
@@ -308,7 +310,7 @@
 %
 %
 %
-%	DOCUMENT CONTENT
+%  DOCUMENT CONTENT
 %
 %
 %
@@ -317,11 +319,11 @@
 
 
 %use our custom fancy header definitions
-\pagestyle{fancy}	
+\pagestyle{fancy}
 
 
 %---------------------------------------------------------------------------------------
-%	TITLE HEADLINE
+%  TITLE HEADLINE
 %----------------------------------------------------------------------------------------
 \vspace{-20.55pt}
 
@@ -348,36 +350,36 @@
 \center{\huge{\textbf{\textcolor{sectcol}{%
 % Title
 \ifcvtitle%
-	PhD in Matematica Applicata / CFD%
+  PhD in Matematica Applicata / CFD%
 \else%
-	Ingegnere Matematico%
+  Ingegnere Matematico%
 \fi
 }}}}%
 %\vspace{-2px}
 % ================
 % Subtitle
 \ifcvsubtitle%
-	\center{\large{\textcolor{bgcol}{A partire da estate/autunno 2017}}}%
+  \center{\large{\textcolor{bgcol}{A partire da estate/autunno 2017}}}%
 \else%
-	\vspace*{2px}
+  \vspace*{2px}
 \fi
 \vspace*{4px}%
 % ================
 \vspace{4px}%
 %
 %----------------------------------------------------------------------------------------
-%	HEADER IMAGE
+%  HEADER IMAGE
 %----------------------------------------------------------------------------------------
 
 %\begin{figure}[H]
 %\begin{flushright}
-	%\includegraphics[trim= 320 130 460 210,clip,width=0.2\linewidth]{Foto_Smart.jpg}	%trimming relative to image size!
+  %\includegraphics[trim= 320 130 460 210,clip,width=0.2\linewidth]{Foto_Smart.jpg}  %trimming relative to image size!
     %\includegraphics[width=0.2\linewidth]{Foto_Smart.jpg}
 %\end{flushright}
 %\end{figure}
 
 %---------------------------------------------------------------------------------------
-%	QR CODE (optional)
+%  QR CODE (optional)
 %----------------------------------------------------------------------------------------
 %\vspace{-136pt}
 %\hspace{0.75\linewidth}
@@ -386,20 +388,20 @@
 %\vspace{88pt}
 
 %---------------------------------------------------------------------------------------
-%	META SECTION
+%  META SECTION
 %----------------------------------------------------------------------------------------
 
 %\vspace{-114pt}
 
 %\metasection{Status:}{M.Sc. Digital Media, IT Consultant at We4IT Bremen}
-%\metasection{Fields:}{Project Management, Software Development, Scrum, Usability} 
+%\metasection{Fields:}{Project Management, Software Development, Scrum, Usability}
 %\metasection{Prefers:}{JS, Java, XPages, Flex / AIR, Processing, Git, Eclipse}
 %\metasection{Activities:}{Global Game Jam, Sound Engineering, Blender, Martial Arts}
 
 %\vspace{6pt}
 
 %---------------------------------------------------------------------------------------
-%	SUMMARAY (optional)
+%  SUMMARAY (optional)
 %----------------------------------------------------------------------------------------
 
 %\cvsection{Summary}\\
@@ -407,108 +409,130 @@
 
 %============================================================================%
 %
-%	CV SECTIONS AND EVENTS (MAIN CONTENT)
+%  CV SECTIONS AND EVENTS (MAIN CONTENT)
 %
 %============================================================================%
 
 %---------------------------------------------------------------------------------------
-%	EDUCATION SECTION
+%  EDUCATION SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Formazione}
 
-\cvevent{2017-}%
-		{Dottorando in matematica applicata}%
-		{\'Ecole des Ponts ParisTech - EDF R\&D}%
-        {Schemi CDO per le equazioni non-stazionarie di Navier-Stoker per un fluido incopressibile}%
+\cvevent{Dal 2017}%
+        {Dottorando in matematica applicata}%
+        {\'Ecole des Ponts ParisTech - EDF R\&D}%
+        {\noindent Schemi CDO per le equazioni non-stazionarie di Navier-Stoker per un fluido incopressibile}%
         {Tutor: Ern Alexandre (CERMICS) e Bonelle J\'er\^ome (EDF R\&D)}%
 
-\cvevent{2015 - 2017}{Laurea Magistrale}{Politecnico di Milano}{Ingegneria Matematica, specializzazione: Scienze Computazionali per l'Ingegneria}{Voto di Laurea: 110 e Lode/110}
+\cvevent{2015 - 2017}%
+        {Laurea Magistrale}%
+        {Politecnico di Milano}%
+        {Ingegneria Matematica, specializzazione: Scienze Computazionali per l'Ingegneria}%
+        {Voto di Laurea: 110 e Lode/110}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2013 - 2017}{Ciclo  dell'Ingegner \textit{Polytechnicien}}{École polytechnique}{Palaiseau, Francia. Equivalente a BSc e MSc}{Specializzazione: Matematica Applicata -- EDP}
+\cvevent{2013 - 2017}%
+        {Ciclo  dell'Ingegner \textit{Polytechnicien}}%
+        {École polytechnique}%
+        {Palaiseau, Francia. Equivalente a BSc e MSc}%
+        {Specializzazione: Matematica Applicata -- EDP}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{2010 - 2015}{Laurea Triennale}{Politecnico di Milano}{Ingegneria Matematica. Voto di Laurea: 110 e Lode/110}{Premio "Miglior Matricola" (2010) dopo i risultati del test d'ingresso e degli esami del primo semestre}
+\cvevent{2010 - 2015}%
+        {Laurea Triennale}%
+        {Politecnico di Milano}%
+        {Ingegneria Matematica. Voto di Laurea: 110 e Lode/110}%
+        {Premio "Miglior Matricola" (2010) dopo i risultati del test d'ingresso e degli esami del primo semestre}
 
 %---------------------------------------------------------------------------------------
-%	EXPERIENCE
+%  EXPERIENCE
 %----------------------------------------------------------------------------------------
 \cvsection{Esperienze Professionali}
 
 %
-\cvevent{09/16--02/17}{Stage di Ricerca, 6 mesi}{EDF R\&D, Chatou}{Sviluppo e analisi numerica di un metodo HHO per i problemi di diffusione anisotropa}{Integrazione nel software industriale \emph{Code\_Saturne}; parallelizzazione con OpenMP}
+\cvevent{09/16--02/17}%
+        {Stage di Ricerca, 6 mesi}%
+        {EDF R\&D, Chatou}{Sviluppo e analisi numerica di un metodo HHO per i problemi di diffusione anisotropa}%
+        {Integrazione nel software industriale \emph{Code\_Saturne}; parallelizzazione con OpenMP}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{03-08/2015}{Stage di Ricerca, 5 mesi}{US ESI R\&D, San Diego}{Primi passi verso lo sviluppo di un nuovo sistema per un calcolo rapido della risposta vibro-acustica di un sistema}{Convalida con simulazioni}
+\cvevent{03-08/2015}%
+        {Stage di Ricerca, 5 mesi}%
+        {US ESI R\&D, San Diego}%
+        {Primi passi verso lo sviluppo di un nuovo sistema per un calcolo rapido della risposta vibro-acustica di un sistema}{Convalida con simulazioni}
 
 %\textcolor{softcol}{\hrule}
 
 %
-\cvevent{08/2014}{Stage Estivo}{VTB Bank, Inkutsk}{Foreign Exchange Control Group}{Aiuto nella preparazione e convalida finale di contratti internazionali, gestione d'archivio}
+\cvevent{08/2014}%
+        {Stage Estivo}%
+        {VTB Bank, Inkutsk}%
+        {Foreign Exchange Control Group}%
+        {Aiuto nella preparazione e convalida finale di contratti internazionali, gestione d'archivio}
 
 \vspace{12pt}
 \begin{minipage}{.48\linewidth}
-\begin{flushleft}                           
+\begin{flushleft}
 \cvsubsection{Competenze Software}
 \vspace{6pt}
 \begin{tabular*}{1\textwidth}{l l l}
-&	\larrow{bgcol}  \textbf{Buone}: C/C\texttt{++}, MATLAB/Scilab, \LaTeX,\\[3pt]
-& 	  FreeFem\texttt{++}, sistemi Unix, pacchetto Office,\\[3pt]
-&	  OpenMP, MPI\\[3pt]
-&	\larrow{bgcol}  \textbf{Basiche}: Python, R, Java, VAOne, Nastran\\[3pt]  
-	\end{tabular*}
-\end{flushleft} 
+&  \larrow{bgcol}  \textbf{Buone}: C/C\texttt{++}, MATLAB/Scilab, \LaTeX,\\[3pt]
+&    FreeFem\texttt{++}, sistemi Unix, pacchetto Office,\\[3pt]
+&    OpenMP, MPI\\[3pt]
+&  \larrow{bgcol}  \textbf{Basiche}: Python, R, Java, VAOne, Nastran\\[3pt]
+  \end{tabular*}
+\end{flushleft}
 \end{minipage}
 \hfill
 \begin{minipage}{.48\linewidth}
-\begin{flushright}                                      
+\begin{flushright}
 \cvsubsection{Lingue}
 \vspace{6pt}
 \begin{tabular*}{1\linewidth}{l l l}
-&		 \larrow{bgcol}  \textbf{Italiano}: &Madrelingua\\[3pt]
-&		 \larrow{bgcol}  \textbf{Inglese}:  &Fluente, certificazione FCE, B2\\[3pt]
-&		 \larrow{bgcol}  \textbf{Francese}: &Fluente, certificazione TCF, C1\\[3pt]
-&		 \larrow{bgcol}  \textbf{Russo}:    &Livello base\\[3pt]
-	\end{tabular*}
-\end{flushright} 
+&     \larrow{bgcol}  \textbf{Italiano}: &Madrelingua\\[3pt]
+&     \larrow{bgcol}  \textbf{Inglese}:  &Fluente, certificazione FCE, B2\\[3pt]
+&     \larrow{bgcol}  \textbf{Francese}: &Fluente, certificazione TCF, C1\\[3pt]
+&     \larrow{bgcol}  \textbf{Russo}:    &Livello base\\[3pt]
+  \end{tabular*}
+\end{flushright}
 \end{minipage}
 
 \bigskip
 
 \begin{minipage}{.48\linewidth}
-\begin{flushleft}                           
+\begin{flushleft}
 \cvsubsection{Attività Extracurriculari}
 \vspace{6pt}
 \begin{tabular*}{1\textwidth}{l l }
-&		 \larrow{bgcol}  Gestione e approvvigionamento di una cucina e \\[3pt]& di un dormitorio di  40 studenti (2015) \\[3pt]
-&		 \larrow{bgcol}  Tesoriere dell'AIM - Associazione Ingegneri \\[3pt]& Matematici (2016)\\[3pt]
-	\end{tabular*}
-\end{flushleft} 
+&     \larrow{bgcol}  Gestione e approvvigionamento di una cucina e \\[3pt]& di un dormitorio di  40 studenti (2015) \\[3pt]
+&     \larrow{bgcol}  Tesoriere dell'AIM - Associazione Ingegneri \\[3pt]& Matematici (2016)\\[3pt]
+  \end{tabular*}
+\end{flushleft}
 \end{minipage}
 \hfill
 \begin{minipage}{.48\linewidth}
-\begin{flushright}                                      
+\begin{flushright}
 \cvsubsection{Volontariato e Altri Interessi}
 \vspace{6pt}
 \begin{tabular*}{1\linewidth}{l l}
-&		 \larrow{bgcol} Due campi estivi come muratore in Kenya\\[3pt]
-& 		 \larrow{bgcol} Membro di Smileland, che sostiene \\[3pt]&un villaggio di orfani in Congo\\[3pt]
-&		 \larrow{bgcol} Insegnamento di italiano per i profughi\\[3pt]
-	\end{tabular*}
-\end{flushright} 
+&     \larrow{bgcol} Due campi estivi come muratore in Kenya\\[3pt]
+&     \larrow{bgcol} Membro di Smileland, che sostiene \\[3pt]&un villaggio di orfani in Congo\\[3pt]
+&     \larrow{bgcol} Insegnamento di italiano per i profughi\\[3pt]
+  \end{tabular*}
+\end{flushright}
 \end{minipage}
 
 
 
 
 %-------------------------------------------------------------------------------------------------
-%	ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth) 
+%  ARTIFICIAL FOOTER (fancy footer cannot exceed linewidth)
 %--------------------------------------------------------------------------------------------------
 
 \null
@@ -522,7 +546,7 @@
 %
 %
 %
-%	DOCUMENT END
+%  DOCUMENT END
 %
 %
 %
