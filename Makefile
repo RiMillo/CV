@@ -5,11 +5,14 @@ CF?=-c
 
 all: eng fra ita
 eng:
-	cd CV_ENG && latexmk $(LF) && cd ..
+	@echo "Compiling CV_ENG"
+	@cd CV_ENG && latexmk $(LF) && cd ..
 fra:
-	cd CV_FRA && latexmk $(LF) && cd ..
+	@echo "Compiling CV_FRA"
+	@cd CV_FRA && latexmk $(LF) && cd ..
 ita:
-	cd CV_ITA && latexmk $(LF) && cd ..
+	@echo "Compiling CV_ITA"
+	@cd CV_ITA && latexmk $(LF) && cd ..
 
 clean: clean-eng clean-fra clean-ita
 clean-eng:
