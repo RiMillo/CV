@@ -23,10 +23,11 @@
 %
 % Class template for my CV
 %
-% Four main colors are defined:
+% Five main colors are defined:
 % - bgcol:     dark background color for the title (fg: white), for the bullet-point-like arrows, dates in cvevent
 % - sectcol:   color for the section head (fg: white) and for the place in cvevent
 % - lightsect: color for the details (arrows) in the section head
+% - lighthead: color for the vertical bar in the head
 % - softcol:   light background color (horizontal lines)
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesClass{RMcv}[2020/03/16 Class for personal CV template]
@@ -171,6 +172,7 @@
 %accent color
 \definecolor{sectcol}{RGB}{100,120,180}
 \definecolor{lightsect}{RGB}{128,206,214}
+\definecolor{lighthead}{RGB}{128,206,214}
 
 %dark background color
 \definecolor{bgcol}{RGB}{100,110,120}
@@ -313,7 +315,7 @@
 
 % use this for single words, e.g. CV or RESUME etc.
 % param1: CV name, for example, CV or Resume
-\newcommand\cvhead[1]{\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\href{https://cermics.enpc.fr/~milanir/}{\HUGE{\textcolor{white}{Riccardo \textbf{\textsc{Milani}}}}}\hspace{1em}\textcolor{lightsect}{\rule[-1mm]{1mm}{0.9cm}}\hspace{1em}\HUGE{\textcolor{white}{\textsc{#1}}}}}}
+\newcommand\cvhead[1]{\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\href{https://cermics.enpc.fr/~milanir/}{\HUGE{\textcolor{white}{Riccardo \textbf{\textsc{Milani}}}}}\hspace{1em}\textcolor{lighthead}{\rule[-1mm]{1mm}{0.9cm}}\hspace{1em}\HUGE{\textcolor{white}{\textsc{#1}}}}}}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM STRUT FOR EMPTY BOXES
