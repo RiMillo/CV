@@ -171,10 +171,11 @@
 
 %accent color
 \definecolor{sectcol}{RGB}{100,120,180}
-\definecolor{lightsect}{RGB}{128,206,214}
-\definecolor{lighthead}{RGB}{128,206,214}
+\definecolor{lightsect}{HTML}{C8CDDB}
+\definecolor{lighthead}{HTML}{A6ADC1}
 
 %dark background color
+%\definecolor{bgcol}{HTML}{303E69}
 \definecolor{bgcol}{RGB}{100,110,120}
 
 %light background / accent color
