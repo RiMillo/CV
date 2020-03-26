@@ -316,7 +316,7 @@
 
 % use this for single words, e.g. CV or RESUME etc.
 % param1: CV name, for example, CV or Resume
-\newcommand\cvhead[1]{\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\href{https://cermics.enpc.fr/~milanir/}{\HUGE{\textcolor{white}{Riccardo \textbf{\textsc{Milani}}}}}\hspace{1em}\textcolor{lighthead}{\rule[-1mm]{1mm}{0.9cm}}\hspace{1em}\HUGE{\textcolor{white}{\textsc{#1}}}}}}
+\newcommand\cvhead[1]{\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\href{https://cermics.enpc.fr/~milanir/}{\Huge{\textcolor{white}{Riccardo \textbf{\textsc{Milani}}}}}\hspace{1em}\textcolor{lighthead}{\rule[-1mm]{1mm}{0.9cm}}\hspace{1em}\Huge{\textcolor{white}{\textsc{#1}}}}}}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM STRUT FOR EMPTY BOXES
