@@ -10,24 +10,33 @@ VIEWER?=evince
 all: eng fra ita
 eng:
 	@echo "Compiling CV_ENG"
-	@cd CV_ENG && latexmk $(LF) && cd ..
+	@echo
+	@latexmk -cd CV_ENG/CV_ENG.tex $(LF)
+	@echo
+	@echo "ENG done"
 fra:
 	@echo "Compiling CV_FRA"
-	@cd CV_FRA && latexmk $(LF) && cd ..
+	@echo
+	@latexmk -cd CV_FRA/CV_FRA.tex $(LF)
+	@echo
+	@echo "FRA done"
 ita:
 	@echo "Compiling CV_ITA"
-	@cd CV_ITA && latexmk $(LF) && cd ..
+	@echo
+	@latexmk -cd CV_ITA/CV_ITA.tex $(LF)
+	@echo
+	@echo "ITA done"
 
 clean: clean-eng clean-fra clean-ita
 clean-eng:
-	@echo "Cleaning CV_ENG"
-	@cd CV_ENG && latexmk $(CF) -quiet && cd ..
+	@echo "Cleaning CV_ENG (option: $(CF))"
+	@latexmk $(CF) -quiet -cd CV_ENG/CV_ENG.tex
 clean-fra:
-	@echo "Cleaning CV_FRA"
-	@cd CV_FRA && latexmk $(CF) -quiet && cd ..
+	@echo "Cleaning CV_FRA (option: $(CF))"
+	@latexmk $(CF) -quiet -cd CV_FRA/CV_FRA.tex
 clean-ita:
-	@echo "Cleaning CV_ITA"
-	@cd CV_ITA && latexmk $(CF) -quiet && cd ..
+	@echo "Cleaning CV_ITA (option: $(CF))"
+	@latexmk $(CF) -quiet -cd CV_ITA/CV_ITA.tex
 
 view: view-eng view-fra view-ita
 view-eng:
