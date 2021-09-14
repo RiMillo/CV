@@ -170,13 +170,14 @@
 \RequirePackage{color}
 
 %accent color
-\definecolor{sectcol}{RGB}{100,120,180}
-\definecolor{lightsect}{HTML}{C8CDDB}
-\definecolor{lighthead}{HTML}{A6ADC1}
+\definecolor{sectcol}{HTML}{0077B3}
+\definecolor{lightsect}{HTML}{C9EFF6}
+\definecolor{lighthead}{HTML}{ADD6DD}
 
 %dark background color
 %\definecolor{bgcol}{HTML}{303E69}
-\definecolor{bgcol}{RGB}{100,110,120}
+%\definecolor{bgcol}{RGB}{100,110,120}
+\definecolor{bgcol}{HTML}{004466}
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
