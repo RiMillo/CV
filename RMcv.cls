@@ -280,12 +280,12 @@
 % param 4:  what was your position
 % param 5:  some words about your contributions
 %
-\newcommand\intercvevent{6pt}
+\newcommand\intercvevent{4pt}
 \newcommand\intracvevent{6pt}
 \newcommand{\cvevent}[5]
 {
 \vspace{\intercvevent}
-  \begin{tabular*}{1\textwidth}{p{2.3cm} p{7.8cm} x{6.9cm}} %10.8 3.9
+  \begin{tabular*}{1\textwidth}{p{2.3cm} p{7.0cm} x{7.7cm}} %10.8 3.9
  \textcolor{bgcol}{#1}& \textbf{#2} & \vspace{2.5pt}\textcolor{sectcol}{#3}
 
   \end{tabular*}
