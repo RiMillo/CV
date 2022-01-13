@@ -331,7 +331,24 @@
 \newcommand{\lorem}
 {Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec a diam lectus.}
 
+%----------------------------------------------------------------------------------------
+% COMMON STUFF (e.g. links, article, phone...)
+%----------------------------------------------------------------------------------------
+\newcommand{\birthday}{15/01/1991}
+\newcommand{\emailhref}{\href{mailto:ricc.milani@gmail.com}{\textcolor{sectcol}{\textbf{ricc.milani@gmail.com}}}}
+\newcommand{\phone}{+33 7 83 93 34 47}
+\newcommand{\LIhref}[1]{\href{https://www.linkedin.com/in/milanir/?locale=#1}{\bfseries/in/milanir}}
+\newcommand{\GHhref}{\href{https://github.com/RiMillo}{/RiMillo}}
+\newcommand{\SciencesJOhref}{\href{https://sciences2024.polytechnique.fr/}{\textsc{Sciences}\textsuperscript{2024}}}
+\newcommand{\PhDlink}{https://tel.archives-ouvertes.fr/tel-03080530}
+\newcommand{\articlehref}{\href{https://www.degruyter.com/document/doi/10.1515/cmam-2021-0089/html}{\emph{Milani}, Bonelle, Ern; \emph{Artificial compressibility methods for the incompressible Navier--Stokes equations using lowest-order face-based schemes on polytopal meshes}, 2022, CMAM, 22(1), 133--154}}
+\newcommand{\tesilink}{https://www.politesi.polimi.it/handle/10589/133692}
+\newcommand{\TeXtipshref}{\href{https://github.com/RiMillo/LaTeX_tips}{\LaTeX}}
+\newcommand{\AIMhref}[1]{\href{https://www.aim-mate.it/#1/}{AIM}}
+
 % Code_Saturne
 \newcommand{\cs}{{\fontfamily{ppl}\fontshape{it}\selectfont Code\_Saturne}}
+\newcommand{\CShref}{\href{https://www.code-saturne.org/cms/}{\cs{}}}
+
 %
 \endinput
