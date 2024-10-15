@@ -1,18 +1,10 @@
 \documentclass[english]{RMcv}
 %
 \hypersetup{%
-    hidelinks,%
-    colorlinks=false,%
-    pdfauthor={Riccardo Milani},%
-    pdftitle={Milani's resume},%
-    pdfdisplaydoctitle=true,%
-    %pdfsubject={CV},
-    pdfkeywords={resume,CV},%
-    %pdfpagemode=FullScreen,%
-    %pdfmenubar=false,%
-    %pdftoolbar=false,%
-    pdflang=en-US,%
-    pdfcreator=LaTeX,%
+  % Language related
+  pdftitle={Milani's resume},%
+  pdfkeywords={resume,CV},%
+  pdflang=en-US,%
 }
 
 %\renewcommand\intracvevent{4pt} % Spacing between a cvevent and the previous object. Default: 6pt
@@ -45,14 +37,17 @@
 
 \vspace{2px}
 \center{%
- \ifcvtitle{Mathematical Engineer \textbullet{}} \fi%
- Italian, French \textbullet{} %\faFlag~
- \birthday{} \textbullet{} %
- Paris \textbullet{} %
- \emailhref{} \textbullet{} %\faEnvelope
- {\phone{}} \textbullet{} %\faPhone or \faMobilePhone\footnotesize
- \textcolor{sectcol}{\faLinkedinSquare\LIhref{en_US}} \textbullet{} %
- \faGithub\GHhref{}% \textbullet{} %
+  \ifcvtitle{Mathematical Engineer \textbullet{}} \fi%
+  Italian, French \textbullet{} %\faFlag~
+  \birthday{} \textbullet{} %
+  Paris \textbullet{} %
+  \emailhref{} \textbullet{} %\faEnvelope
+  {\phone{}} \\%\textbullet{} %\faPhone or \faMobilePhone\footnotesize
+  % SECOND LINE
+  \textcolor{sectcol}{\faLinkedinSquare\LIhref{en_US}} \textbullet{} %
+  \faGithub\GHhref{} \textbullet{} %
+  \textcolor{sectcol}{\faHome{}\homepagehref} \textbullet{} %
+  \ResearchGatehref{}
 }
 \vspace{2px}
 \center{\huge{\textbf{\textcolor{sectcol}{%
@@ -122,6 +117,49 @@ PhD \textbullet{} Research engineer \textbullet{} Numerical methods%
 %============================================================================%
 
 %---------------------------------------------------------------------------------------
+%  EXPERIENCE
+%----------------------------------------------------------------------------------------
+\cvsection{Experience}
+
+\cvevent{07/`22-}%
+        {Research engineer}%
+        {ONERA, C\^{a}tillon}%
+        {Numerical schemes and AI for the CFD. \href{\NextSimlink}{Project} management. \href{\articleJeanlink}{Internships} and PhDs advisor}%
+        {Software development (CODA, \CoMMAhref). Scientific computing, HPC, installation management on computing clusters}
+
+%
+\cvevent{01/`21-04/`22}%
+        {Postdoctoral researcher}%
+        {CEREA - \'Ecole des Ponts ParisTech}%
+        {\SciencesJOhref{}, the physics of sports. Archery: training support and performance optimization}%
+        {CFD simulations of arrow flights in real-life conditions, statistical analysis, computer vision}
+
+%
+\cvevent{09/'16-02/'17}%
+        {Research Internship, 6 months}%
+        {EDF R\&D, Chatou}%
+        {Development and numerical analysis of a \href{\tesilink}{3D HHO method for anisotropic diffusion}}%
+        {Integration within the industrial code \cs{} (\texttt{C}); parallelization by OpenMP}
+
+%\textcolor{softcol}{\hrule}
+
+%
+\cvevent{03-08/2015}{Research Internship, 5 months}%
+        {US ESI R\&D, San Diego}%
+        {First steps into the development of a new method for a fast computation of the vibro-acoustic response of a system}%
+        {Validation against software simulations}
+
+%\textcolor{softcol}{\hrule}
+
+%
+%\cvevent{08/2014}%
+        %{Summer Internship}%
+        %{VTB Bank, Irkutsk}%
+        %{Foreign Exchange Control Group}{Support in the preparation and final validation of files about international contracts, records management}
+
+\vspace{8pt}
+
+%---------------------------------------------------------------------------------------
 %  EDUCATION SECTION
 %--------------------------------------------------------------------------------------
 \cvsection{Education}
@@ -129,8 +167,8 @@ PhD \textbullet{} Research engineer \textbullet{} Numerical methods%
 \cvevent{2017 - 2020}%
         {PhD in Applied Mathematics}%
         {\'Ecole des Ponts ParisTech, INRIA, and EDF R\&D}%
-        {\href{\PhDlink}{\emph{Compatible Discrete Operator} schemes for the unsteady incompressible Navier–Stokes equations}. Advisors: Ern Alexandre (ENPC, INRIA) and Bonelle J\'er\^ome (EDF R\&D)}%
-        {Peer-reviewed article: \articlehref{}}
+        {\href{\PhDlink}{\emph{Compatible Discrete Operator}} schemes for the unsteady incompressible Navier–Stokes equations. Advisors: Ern Alexandre (ENPC, INRIA) and Bonelle J\'er\^ome (EDF R\&D)}%
+        {\href{\articlelink}{Peer-reviewed article}: \article{}}
 
 %\cvevent{2015 - 2017}%
         %{MSc in Mathematical Engineering}%
@@ -152,43 +190,7 @@ PhD \textbullet{} Research engineer \textbullet{} Numerical methods%
 \cvevent{2010 - 2017}%
         {BSc and MSc in Mathematical Engineering}%
         {Politecnico di Milano}%
-        {\emph{Laurea Triennale} and \href{\tesilink}{\emph{Magistrale} in Mathematical Engineering}. Specialization: Applied Mathematics \& Computer Sciences}{Score: 110 and honors/110 (BSc and MSc). Awarded "Best freshman" (2010) after the results of the entry test and first semester exams}
-
-\vspace{8pt}
-
-%---------------------------------------------------------------------------------------
-%  EXPERIENCE
-%----------------------------------------------------------------------------------------
-\cvsection{Experience}
-
-\cvevent{01/`21-04/`22}%
-        {Postdoctoral researcher}%
-        {CEREA - \'Ecole des Ponts ParisTech}%
-        {\SciencesJOhref{}, the physics of sports. Archery: training support and performance optimization}%
-        {CFD simulations of arrow flights in real-life conditions, statistical analysis, computer vision}
-
-%
-\cvevent{09/'16-02/'17}%
-        {Research Internship, 6 months}%
-        {EDF R\&D, Chatou}%
-        {\href{\tesilink}{Development and numerical analysis of a 3D HHO method for anisotropic diffusion}}%
-        {Integration within the industrial code \cs{} (\texttt{C}); parallelization by OpenMP}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{03-08/2015}{Research Internship, 5 months}%
-        {US ESI R\&D, San Diego}%
-        {First steps into the development of a new method for a fast computation of the vibro-acoustic response of a system}%
-        {Validations against software simulations}
-
-%\textcolor{softcol}{\hrule}
-
-%
-\cvevent{08/2014}%
-        {Summer Internship}%
-        {VTB Bank, Irkutsk}%
-        {Foreign Exchange Control Group}{Support in the preparation and final validation of files about international contracts, records management}
+        {\emph{Laurea Triennale} and \emph{Magistrale} in Mathematical Engineering. Specialization: Applied Mathematics \& Computer Sciences}{Score: 110 and honors/110 (BSc and MSc). Awarded "Best freshman" (2010) after the results of the entry test and first semester exams}
 
 \vspace{8pt}
 
@@ -197,11 +199,11 @@ PhD \textbullet{} Research engineer \textbullet{} Numerical methods%
 \cvsubsection{Programming skills}
 \vspace{6pt}
 \begin{tabular*}{1\linewidth}{l l}
-&     \larrow{bgcol} \textbf{Good knowledge}: \texttt{C}/\texttt{C++}, OpenMP, MPI, \TeXtipshref{},\\[3pt]
-&       Unix systems, MATLAB, Git/SVN, \texttt{python},\\[3pt]
-&       \CShref{}, shell scripting, Office\\[3pt]
-&     \larrow{bgcol} \textbf{Basic knowledge}: Fortran, OpenCV, \texttt{R}, SALOME,\\[3pt]
-&       FreeFem\texttt{++}, Java\\[3pt]
+&     \larrow{bgcol} \textbf{Good knowledge}: \texttt{C}/\texttt{C++}, OpenMP, MPI, \texttt{python},\\[3pt]
+&       Unix systems, \TeXtipshref{}, Git/SVN, spack, shell scripting,\\[3pt]
+&       \CShref{}, Office\\[3pt]
+&     \larrow{bgcol} \textbf{Basic knowledge}: MATLAB, Fortran, OpenCV, \texttt{R},\\[3pt]
+&       Rust, SALOME%FreeFem\texttt{++}, Java\\[3pt]
   \end{tabular*}
 \end{flushleft}
 \end{minipage}
@@ -215,7 +217,7 @@ PhD \textbullet{} Research engineer \textbullet{} Numerical methods%
 &     \larrow{bgcol} Head of a 40-student dormitory ('15) \\[3pt]
 &     \larrow{bgcol} General-treasurer of \AIMhref{en} ('16)\\[3pt]
 &     \larrow{bgcol} PhD-students representative for EDF-MFEE ('18-'20)\\[3pt]
-&     \larrow{bgcol} Running (Paris marathon '19)\\[3pt]
+&     \larrow{bgcol} Running (Paris marathon '19, '24)\\[3pt]
 \end{tabular*}
 \end{flushright}
 \end{minipage}
@@ -230,7 +232,7 @@ PhD \textbullet{} Research engineer \textbullet{} Numerical methods%
 &     \larrow{bgcol} \textbf{Italian}: &Native\\[3pt]
 &     \larrow{bgcol} \textbf{English}: &Fluent, FCE certificate, B2\\[3pt]
 &     \larrow{bgcol} \textbf{French}:  &Fluent, TCF certificate, C1\\[3pt]
-&     \larrow{bgcol} \textbf{Russian}: &Conversational level\\[3pt]
+&     \larrow{bgcol} \textbf{German, Russian}: &Basic\\[3pt]
 \end{tabular*}
 \end{flushleft}
 \end{minipage}

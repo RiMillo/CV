@@ -93,6 +93,9 @@
 % more font size definitions
 \RequirePackage{moresize}
 
+% Cool icons
+\RequirePackage{fontawesome}
+
 
 %----------------------------------------------------------------------------------------
 %  PAGE LAYOUT  DEFINITIONS
@@ -159,10 +162,6 @@
 \RequirePackage{tikz}
 \usetikzlibrary{shapes, backgrounds,mindmap, trees}
 
-\RequirePackage{hyperref}
-
-\RequirePackage{fontawesome}
-
 %----------------------------------------------------------------------------------------
 %  Color DEFINITIONS
 %----------------------------------------------------------------------------------------
@@ -181,6 +180,29 @@
 
 %light background / accent color
 \definecolor{softcol}{RGB}{225,225,225}
+
+%link color
+\definecolor{linkcol}{HTML}{159957}
+
+%----------------------------------------------------------------------------------------
+%  LINKS DEFINITIONS
+%----------------------------------------------------------------------------------------
+
+% Common
+\RequirePackage[
+  % Links style
+  colorlinks=false,%
+  %hidelinks,%
+  allbordercolors=linkcol,
+  pdfborderstyle={/S/U/W 0.05},
+  pdfauthor={Riccardo Milani},%
+  pdfdisplaydoctitle=true,%
+  pdfcreator=LaTeX,%
+  %pdfsubject={CV},
+  %pdfpagemode=FullScreen,%
+  %pdfmenubar=false,%
+  %pdftoolbar=false,%
+]{hyperref}
 
 
 %============================================================================%
@@ -211,7 +233,7 @@
 %   ARROW GRAPHICS in Tikz
 %----------------------------------------------------------------------------------------
 
-% a six pointed arrow poiting to the left
+% a six pointed arrow pointing to the right
 \newcommand{\tzlarrow}{(0,0) -- (0.2,0) -- (0.3,0.2) -- (0.2,0.4) -- (0,0.4) -- (0.1,0.2) -- cycle;}
 
 % include the left arrow into a tikz picture
@@ -317,7 +339,8 @@
 
 % use this for single words, e.g. CV or RESUME etc.
 % param1: CV name, for example, CV or Resume
-\newcommand\cvhead[1]{\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\href{https://rimillo.github.io/CV/}{\Huge{\textcolor{white}{Riccardo \textbf{\textsc{Milani}}}}}\hspace{1em}\textcolor{lighthead}{\rule[-1mm]{1mm}{0.9cm}}\hspace{1em}\Huge{\textcolor{white}{\textsc{#1}}}}}}
+\newcommand{\homepagelink}{https://rimillo.github.io/CV}
+\newcommand\cvhead[1]{\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\Huge{\textcolor{white}{Riccardo \textbf{\textsc{Milani}}}}\hspace{1em}\textcolor{lighthead}{\rule[-1mm]{1mm}{0.9cm}}\hspace{1em}\Huge{\textcolor{white}{\textsc{#1}}}}}}
 
 %----------------------------------------------------------------------------------------
 % CUSTOM STRUT FOR EMPTY BOXES
@@ -339,12 +362,19 @@
 \newcommand{\phone}{+33 7 83 93 34 47}
 \newcommand{\LIhref}[1]{\href{https://www.linkedin.com/in/milanir/?locale=#1}{\bfseries/in/milanir}}
 \newcommand{\GHhref}{\href{https://github.com/RiMillo}{/RiMillo}}
+\newcommand{\homepagehref}{\href{\homepagelink}{\texttt{://rimillo.github.io/CV}}}
+\newcommand{\ResearchGatehref}{ResearchGate/\href{https://www.researchgate.net/profile/Riccardo-Milani-4}{Riccardo-Milani-4}}
 \newcommand{\SciencesJOhref}{\href{https://sciences2024.polytechnique.fr/}{\textsc{Sciences}\textsuperscript{2024}}}
 \newcommand{\PhDlink}{https://tel.archives-ouvertes.fr/tel-03080530}
-\newcommand{\articlehref}{\href{https://www.degruyter.com/document/doi/10.1515/cmam-2021-0089/html}{\emph{Milani}, Bonelle, Ern; \emph{Artificial compressibility methods for the incompressible Navier--Stokes equations using lowest-order face-based schemes on polytopal meshes}, 2022, CMAM, 22(1), 133--154}}
+\newcommand{\articlelink}{https://www.degruyter.com/document/doi/10.1515/cmam-2021-0089/html}
+\newcommand{\article}{\emph{RM}, Bonelle, Ern; \emph{Artificial compressibility methods for the incompressible Navier--Stokes equations using lowest-order face-based schemes on polytopal meshes}, 2022, CMAM} % , 22(1), 133--154
 \newcommand{\tesilink}{https://www.politesi.polimi.it/handle/10589/133692}
 \newcommand{\TeXtipshref}{\href{https://github.com/RiMillo/LaTeX_tips}{\LaTeX}}
 \newcommand{\AIMhref}[1]{\href{https://www.aim-mate.it/#1/}{AIM}}
+
+\newcommand{\CoMMAhref}{\href{https://github.com/onera/CoMMA}{CoMMA}}
+\newcommand{\NextSimlink}{https://nextsimproject.eu/}
+\newcommand{\articleJeanlink}{http://dx.doi.org/10.1016/j.jcp.2024.113254}
 
 % Code_Saturne
 \newcommand{\cs}{{\fontfamily{ppl}\fontshape{it}\selectfont Code\_Saturne}}
