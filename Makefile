@@ -5,7 +5,7 @@ EDITOR?=gvim
 
 VIEWER?=evince
 
-.PHONY = all, eng, fra, ita, clean, clean-eng, clean-fra, clean-ita, view, view-eng, view-fra, view-ita, open, open-eng, open-fra, open-ita
+.PHONY = all, eng, fra, ita, clean, clean-eng, clean-fra, clean-ita, view, view-eng, view-fra, view-ita, edit, edit-eng, edit-fra, edit-ita
 
 all: eng fra ita
 eng:
@@ -49,11 +49,11 @@ view-fra:
 view-ita:
 	@$(VIEWER) CV_ITA/CV_ITA.pdf &
 
-open:
+edit:
 	@gvim -O3 CV_ENG/CV_ENG.tex CV_FRA/CV_FRA.tex CV_ITA/CV_ITA.tex
-open-eng:
+edit-eng:
 	@$(EDITOR) CV_ENG/CV_ENG.tex
-open-fra:
+edit-fra:
 	@$(EDITOR) CV_FRA/CV_FRA.tex
-open-ita:
+edit-ita:
 	@$(EDITOR) CV_ITA/CV_ITA.tex
