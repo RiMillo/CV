@@ -339,7 +339,7 @@
 
 % use this for single words, e.g. CV or RESUME etc.
 % param1: CV name, for example, CV or Resume
-\newcommand{\homepagelink}{https://rimillo.github.io/CV}
+\newcommand{\homepagelink}{https://rimillo.github.io}
 \newcommand\cvhead[1]{\hspace{-0.25\linewidth}\colorbox{bgcol}{\makebox[1.5\linewidth][c]{\Huge{\textcolor{white}{Riccardo \textbf{\textsc{Milani}}}}\hspace{1em}\textcolor{lighthead}{\rule[-1mm]{1mm}{0.9cm}}\hspace{1em}\Huge{\textcolor{white}{\textsc{#1}}}}}}
 
 %----------------------------------------------------------------------------------------
@@ -362,7 +362,7 @@
 \newcommand{\phone}{+33 7 83 93 34 47}
 \newcommand{\LIhref}[1]{\href{https://www.linkedin.com/in/milanir/?locale=#1}{\bfseries/in/milanir}}
 \newcommand{\GHhref}{\href{https://github.com/RiMillo}{/RiMillo}}
-\newcommand{\homepagehref}{\href{\homepagelink}{\texttt{://rimillo.github.io/CV}}}
+\newcommand{\homepagehref}{\href{\homepagelink}{\texttt{://rimillo.github.io}}}
 \newcommand{\ResearchGatehref}{ResearchGate/\href{https://www.researchgate.net/profile/Riccardo-Milani-4}{Riccardo-Milani-4}}
 \newcommand{\SciencesJOhref}{\href{https://sciences2024.polytechnique.fr/}{\textsc{Sciences}\textsuperscript{2024}}}
 \newcommand{\PhDlink}{https://tel.archives-ouvertes.fr/tel-03080530}
